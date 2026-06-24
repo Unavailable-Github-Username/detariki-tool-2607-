@@ -7,9 +7,14 @@ CACHE_CHR_COSTUME_CHANGE_ICON = 'chara/costumechangeicon'
 CACHE_CHR_HEAD_S = 'chara/head-s'
 CACHE_CHR_BODY_S = 'chara/body-s'
 CACHE_CHR_COSTUME_S = 'chara/costumedata-s'
+CACHE_CHR_ACC = 'chara/accessory'
 CACHE_PIC_ILLUST = 'pic/illust'
 CACHE_PIC_COMIC = 'pic/comic'
 CACHE_PIC_PORTRAIT = 'pic/portrait'
+CACHE_PIC_TITLE = 'pic/title'
+CACHE_PIC_CUTIN = 'pic/cutin'
+CACHE_PIC_LOAD = 'pic/loading'
+CACHE_PIC_LOBBY = 'pic/member'
 
 MANIFEST_PATH = 'manifest.txt'
 
@@ -47,18 +52,29 @@ COSTUME_CHANGE_ICON_ID_RANGE = [
     range(109000, 109050),
 ]
 
+# ------------------------ acce ------------------------
+# The possible id range of accessory asset
+ACC_ID_RANGE = [
+    range(100, 150),         # (100, 200)
+    range(500, 1700),        # (500, 1600)
+    range(10050, 10100),     # (40000, 41200)
+    range(20000, 20050),
+    range(40100, 41100),
+]
+
 # ------------------------ body ------------------------
 # The possible id range of body asset
 BODY_ID_RANGE = [
-    range(5, 10),            # nude
-    range(10, 35),           # underwear
-    range(100, 200),
-    range(500, 1600),
-    range(10000, 10041, 10), # nude
-    range(10100, 10150, 10), # half nude
-    range(20001, 20500, 1),  # half nude
-    range(30000, 30300),     # underwear
-    range(40000, 41200), 
+    range(5, 10),            # nude (5, 10)
+    range(10, 35),           # underwear (10, 35)
+    range(100, 200),         # (100, 200)
+    range(900, 2000),        # (500, 1600)
+    range(10000, 10100, 10), # nude (10000, 10041, 10)
+    range(10100, 10700, 10), # half nude (10100, 10150, 10)
+    range(20001, 20500, 1),  # half nude (20001, 20500, 1)
+    range(30000, 31000),     # underwear (30000, 30300)
+    range(40000, 41600),     # (40000, 41200)
+    range(50000, 52000),     
 ]
 # List the known body type and its texture parameter.
 # Comment the types with zero or less instances (up-to-date 2025-08-12).
@@ -104,4 +120,5 @@ HEAD_ID_RANGE = []
 
 
 # ------------------------ picture ---------------------
-ILLUST_RANGE = range(1, 90) 
+ILLUST_RANGE = range(1, 500)  # (1, 90)
+TITLE_RANGE = range(1, 120)  # (1, 90)
