@@ -15,6 +15,7 @@ CACHE_PIC_TITLE = 'pic/title'
 CACHE_PIC_CUTIN = 'pic/cutin'
 CACHE_PIC_LOAD = 'pic/loading'
 CACHE_PIC_LOBBY = 'pic/member'
+CACHE_VID_GACHA = 'video'
 
 MANIFEST_PATH = 'manifest.txt'
 
@@ -120,5 +121,34 @@ HEAD_ID_RANGE = []
 
 
 # ------------------------ picture ---------------------
-ILLUST_RANGE = range(1, 500)  # (1, 90)
+ILLUST_RANGE = [
+    range(1, 100),
+    range(200, 220),
+    range(300, 320),
+    range(400, 420),
+    range(500, 520),
+]
+
 TITLE_RANGE = range(1, 120)  # (1, 90)
+
+COSTUME_RANGE = [
+    range(10000, 10050),
+    range(20000, 20050),
+    range(30000, 30350),
+    range(40000, 40500),
+    range(50000, 50500),
+    range(55000, 55800),
+    range(90000, 90300),
+    range(100000, 100200),
+    range(100200, 102000),
+    range(102000, 109200),
+    range(300000, 301000),
+    range(400000, 416500, 10),
+    range(930000, 930200),
+    range(940000, 940500),
+    range(955000, 955800),
+]
+
+GACHA_RANGE = [
+    range(2300, 3550),
+]

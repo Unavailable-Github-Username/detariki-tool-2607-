@@ -51,14 +51,19 @@ class Pic(Base):
         p_name = f'portrait_{chr_id:05d}.png'
         self.__download(path, p_name, os.path.join(save_dir, CACHE_PIC_PORTRAIT), save_ab)
 
-
+    @staticmethod
+    def possible_id_range() -> list:
+        r = []
+        for v in ILLUST_RANGE:
+            r += v
+        return r
 
 if __name__ == '__main__':
     args = parser.parse_args()
 
     p = Pic()
 
-    for id in ILLUST_RANGE:
+    for id in p.possible_id_range():
         p.download_illust(id, args.o, args.save)
 
     ids = [i for i in chara_list]
