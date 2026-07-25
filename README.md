@@ -13,7 +13,7 @@ pip install -r requirements.txt
 ```
 
 ## Usage: For Normal Users (No Engineer Background)
-Download assets I list in my own [manifest](https://github.com/Misora000/detariki-tool/blob/main/manifest.txt).
+Download assets I list in my own [manifest](https://github.com/Unavailable-Github-Username/detariki-tool-2607-/blob/main/manifest.txt).
 ```sh
 python main.py
 ```
@@ -29,11 +29,14 @@ If you want to find assets not list in manifest.txt, you can run scripts manuall
 |costume.py|Download full set of costume of 3D model & QBi model|下載完整的服裝模型(包含頭部與身體)|
 |costumeicon.py|Download costume icons|下載服裝icon|
 |pic.py|Download image objects like illlustration, comic, portrait|下載插圖、漫畫等圖片|
+|gacha.py|Download gacha video bundles(requires AS to extract)||
+|accessory_test.py|Download all accessible accessory 3D models|*It's currently a test version*|
+|title.py|Download title, cutin, member and loading images||
 ||||
 
 Be aware that in the following explanation, the term `possible` does not refer to any truly potential outcome, but rather to outcomes within a `predefined range of results`. Therefore, it does not encompass possibilities outside that range.  
 
-You can change the predefined range in [config.py](https://github.com/Misora000/detariki-tool/blob/main/config.py)
+You can change the predefined range in [config.py](https://github.com/Unavailable-Github-Username/detariki-tool-2607-/blob/main/config.py)
 
 Before using this tool, you must need to know there's no any official manifest so that this tool basically uses `Brute-Force` to try assets url from CDN. All we can do is try to minimize the search range of brute-force.  
 
@@ -57,7 +60,7 @@ python costume.py -chr 2
 ...
 python costume.py -chr 400
 ```
-You can get character id from [chara_list.py](https://github.com/Misora000/detariki-tool/blob/main/chara_list.py)
+You can get character id from [chara_list.py](https://github.com/Unavailable-Github-Username/detariki-tool-2607-/blob/main/chara_list.py)
   
   
 If you are interesting in mining or finding the missed/unlisted assets, see the paremeter detail of each scripts.
@@ -66,10 +69,10 @@ If you are interesting in mining or finding the missed/unlisted assets, see the 
 Body id is simply an integer but distributed across many different ranges. 
 |Range|Cloth Type|
 |---|---|
-|`[5, 10)`, `[10000, 10040]`|Nude|
+|`[5, 10]`, `[10000, 10040]`|Nude|
 |`[10100, 10150]`, `[20000, 20150]`|Half Nude|
-|`[10, 35]`, `[30000, 30300)`|Underwear|
-|`[100, 200)`, `[500, 1600)`|Common, Character Basic|
+|`[10, 35]`, `[30000, 30300]`|Underwear|
+|`[100, 200]`, `[500, 1600]`|Common, Character Basic|
 |`[40000, 41200]`|Unique, New|
 ```sh
 usage: body.py [-h] [-id ID] [-o O]
@@ -110,7 +113,7 @@ python head.py
 ### Download Costume
 Costume is a combination structure of body, head and character.  
 Costume id is an integer like body id but not the same value and currently I don't know the naming rule.  
-I got a list of [costume id](https://github.com/Misora000/detariki-tool/blob/main/costume-id.txt) from the gallery page in game, however obviously the ids in this list are all concern to gacha and item, there still has many costumes (ex: nude) without any gacha or item icon.
+I got a list of [costume id](https://github.com/Unavailable-Github-Username/detariki-tool-2607-/blob/main/costume-id.txt) from the gallery page in game, however obviously the ids in this list are all concern to gacha and item, there still has many costumes (ex: nude) without any gacha or item icon.
 ```sh
 usage: costume.py [-h] [-cos COS] [-chr CHR] [-o O] [-p P]
 
@@ -162,4 +165,40 @@ options:
 python pic.py
 ```
 
-## Future work
+## Download Gacha Video
+```sh
+usage: gacha.py [-h] [-save] [-o O]
+
+options:
+  -h, --help  show this help message and exit
+  -save       save asset bundle files (default: True)
+  -o O        output path
+
+# p.s. After downloading the bundles, you'll need AS to open and extract the file with extension `.bytes` inside, then just simply change the extension to .mp4
+python gacha.py
+```
+
+## Download Accessory (Test Vesion)
+```sh
+usage: accessory_test.py [-h] [-id ID] [-o O]
+
+options:
+  -h, --help  show this help message and exit
+  -id ID      accessory id (corresponding to body ID)
+  -o O        output path
+
+python accessory_test.py
+```
+
+### Download Title
+```sh
+usage: title.py [-h] [-save] [-o O]
+
+options:
+  -h, --help  show this help message and exit
+  -save       save asset bundle files (default: False)
+  -o O        output path
+
+# example: download all image objects and convert to .png
+python title.py
+```
