@@ -57,7 +57,7 @@ COSTUME_CHANGE_ICON_ID_RANGE = [
 # The possible id range of accessory asset
 ACC_ID_RANGE = [
     range(100, 150),         # (100, 200)
-    range(500, 1700),        # (500, 1600)
+    range(500, 1800),        # (500, 1600)
     range(10050, 10100),     # (40000, 41200)
     range(20000, 20050),
     range(40100, 41100),
@@ -69,7 +69,7 @@ BODY_ID_RANGE = [
     range(5, 10),            # nude (5, 10)
     range(10, 35),           # underwear (10, 35)
     range(100, 200),         # (100, 200)
-    range(500, 1800),        # (500, 1600)
+    range(500, 1900),        # (500, 1600)
     range(10000, 10100, 10), # nude (10000, 10041, 10)
     range(10100, 10700, 10), # half nude (10100, 10150, 10)
     range(20001, 20500, 1),  # half nude (20001, 20500, 1)
