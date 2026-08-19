@@ -17,6 +17,7 @@ Download assets I list in my own [manifest](https://github.com/Unavailable-Githu
 ```sh
 python main.py
 ```
+(P.s.Download the entire assets from the list may take up to 11 - 15 GB, think twice before you do so or try specifying the target resources, the usage has been written below.)
 
 ## Usage: For Professional Users
 If you want to find assets not list in manifest.txt, you can run scripts manually.
@@ -202,3 +203,6 @@ options:
 # example: download all image objects and convert to .png
 python title.py
 ```
+
+## Future Plan
+The official has announced the newer collaboration with Sugar Conflict, newer update will be added in next month.
