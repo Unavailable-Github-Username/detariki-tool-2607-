@@ -129,7 +129,7 @@ ILLUST_RANGE = [
     range(500, 520),
 ]
 
-TITLE_RANGE = range(1, 120)  # (1, 90)
+TITLE_RANGE = range(1, 140)  # (1, 90)
 
 COSTUME_RANGE = [
     range(10000, 10050),
@@ -150,5 +150,5 @@ COSTUME_RANGE = [
 ]
 
 GACHA_RANGE = [
-    range(2300, 3550),
+    range(2300, 3610),
 ]
